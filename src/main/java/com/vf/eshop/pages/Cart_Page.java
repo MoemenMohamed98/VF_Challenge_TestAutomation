@@ -10,7 +10,7 @@ import java.time.Duration;
 public class Cart_Page {
 
     private final WebDriver driver;
-    private final By Show_Cart = By.cssSelector("div.showCart");
+    private final By Show_Cart = By.xpath("//img[@alt='shopping trolly']");
     private final By Summary_Cart = By.cssSelector("div.cart-page");
 
 
@@ -21,6 +21,7 @@ public class Cart_Page {
         new WebDriverWait(driver, Duration.ofSeconds(5))
                 .until(ExpectedConditions.visibilityOfElementLocated(Show_Cart));
 
+
         new WebDriverWait(driver, Duration.ofSeconds(5))
                 .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button.cart-btn>span")));
 
@@ -28,7 +29,17 @@ public class Cart_Page {
 
     public void Click_On_Cart(){
 
+        new WebDriverWait(driver, Duration.ofSeconds(5))
+                .until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='search-bar']")));
+
+        new WebDriverWait(driver, Duration.ofSeconds(5))
+                .until(ExpectedConditions.visibilityOfElementLocated(Show_Cart));
+
+        new WebDriverWait(driver, Duration.ofSeconds(5))
+                .until(ExpectedConditions.presenceOfElementLocated(Show_Cart));
+
         driver.findElement(Show_Cart).click();
+
         new WebDriverWait(driver, Duration.ofSeconds(5))
                 .until(ExpectedConditions.visibilityOfElementLocated(Summary_Cart));
     }

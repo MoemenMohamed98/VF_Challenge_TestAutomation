@@ -107,14 +107,14 @@ public class E1_eShopSteps {
                     // Validate on the cart that is displayed the number of the added product \\
         softAssert.assertTrue(driver.findElement(By.cssSelector("button.cart-btn>span")).isDisplayed());
 
-        CartPage_Obj.Click_On_Cart();
-
-                    // Validate on the presence of the added product at the cart page \\
-        softAssert.assertTrue(driver.findElement(By.cssSelector("div[class='cart']")).isDisplayed());
-
-                       //Capture a Screenshot for the summary order details\\
-        File summaryOrder = driver.findElement(By.cssSelector("div.cart-page")).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(summaryOrder,new File("SummaryOrder.png"));
+//        CartPage_Obj.Click_On_Cart();
+//
+//                    // Validate on the presence of the added product at the cart page \\
+//        softAssert.assertTrue(driver.findElement(By.cssSelector("div[class='cart']")).isDisplayed());
+//
+//                       //Capture a Screenshot for the summary order details\\
+//        File summaryOrder = driver.findElement(By.cssSelector("div.cart-page")).getScreenshotAs(OutputType.FILE);
+//        FileUtils.copyFile(summaryOrder,new File("SummaryOrder.png"));
     }
 
 

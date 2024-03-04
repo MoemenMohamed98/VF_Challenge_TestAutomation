@@ -61,7 +61,7 @@ public class CheckOut_Page {
     }
 
     public void Enter_floorNo(String floorNo){
-        driver.findElement(Building_Number).sendKeys(floorNo);
+        driver.findElement(Floor_Number).sendKeys(floorNo);
     }
 
     public void Enter_apartmentNo(String apartmentNo){
